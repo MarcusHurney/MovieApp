@@ -1,16 +1,16 @@
 import React from 'react';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import App from '../view/components/App.js';
 import MovieListContainer from '../view/containers/MovieListContainer';
 import MovieDetailContainer from '../view/containers/MovieDetailContainer';
 
+
 const RouterConfig = () => (
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={MovieListContainer} />
-      <Route path="movies/:movieId" component={MovieDetailContainer} />
-    </Route>
+  <Router>
+    <div>
+      <Route exact path="/" component={MovieListContainer} />
+      <Route path="/movies/:movieId" component={MovieDetailContainer} />
+    </div>
   </Router>
 );
 
