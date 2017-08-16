@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 import MovieListContainer from '../view/containers/MovieListContainer';
 import MovieDetailContainer from '../view/containers/MovieDetailContainer';
 
 
 const RouterConfig = () => (
-  <Router>
+  <Router hashType="slash">
     <div>
       <Route exact path="/" component={MovieListContainer} />
       <Route path="/movies/:movieId" component={MovieDetailContainer} />
