@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Discover Movies on TMDB API",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.0.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/MarcusHurney/MovieApp.git"
