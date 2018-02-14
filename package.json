@@ -8,7 +8,12 @@
     "url": "https://github.com/MarcusHurney/MovieApp.git"
   },
   "scripts": {
-    "dev": "nodemon index.js --ignore client"
+    "start": "node index.js",
+    "dev": "NODE_ENV=development nodemon index.js --ignore client",
+    "build:client":
+      "NODE_ENV=production webpack -p --config webpack.config.js --progress",
+    "postinstall": "npm run clean && npm run build:client",
+    "clean": "rimraf build/*"
   },
   "author": "MarcusHurney",
   "license": "ISC",
