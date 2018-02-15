@@ -16,7 +16,7 @@
     "dev": "NODE_ENV=development nodemon index.js --ignore client",
     "build:client":
       "NODE_ENV=production webpack -p --config webpack.prod.config.js --progress",
-    "postinstall": "npm run clean && npm run build:client"
+    "postinstall": "npm run build:client"
   },
   "author": "MarcusHurney",
   "license": "ISC",
